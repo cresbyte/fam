@@ -269,9 +269,7 @@ const IELTS = () => {
                   <h3 className="text-2xl font-bold text-foreground mb-2">
                     IELTS Training
                   </h3>
-                  <div className="text-3xl font-bold text-primary mb-2">
-                    $299
-                  </div>
+              
                   <p className="text-muted-foreground">
                     Complete course with all materials
                   </p>

@@ -62,13 +62,13 @@ const Contact = () => {
     {
       icon: Mail,
       title: "Email Us",
-      details: "info@englishflow.com",
+      details: "faminternational.shop@gmail.com",
       description: "Get a response within 24 hours",
     },
     {
       icon: Phone,
       title: "Call Us",
-      details: "+1 (555) 123-4567",
+      details: "+91 7984670963",
       description: "Mon-Fri 8AM-8PM EST",
     },
     {

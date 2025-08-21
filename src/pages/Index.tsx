@@ -1,4 +1,8 @@
 import heroImage from "@/assets/hero-english-coach.jpg";
+import beginnerImage from "../assets/begginer.jpeg";
+import intermediateImage from "../assets/intermediate.jpeg";
+import proImage from "../assets/pro.jpg";
+import journeyImage from "../assets/journey.jpg";
 import {
   Play,
   Star,
@@ -134,7 +138,7 @@ const Index = () => {
                 <span className="gradient-text">Ace Your Exams.</span> Go
                 Global.
               </h1>
-              <p className="text-responsive-lg text-muted-foreground mb-8 leading-relaxed max-w-xl mx-auto lg:mx-0">
+              <p className="text-responsive-md text-muted-foreground mb-8 leading-relaxed max-w-xl mx-auto lg:mx-0">
                 Expert IELTS Training, English Spoken courses, GRE preparation,
                 and Immigration & Visa support. Join thousands who've achieved
                 their dreams of studying and working abroad.
@@ -231,7 +235,7 @@ const Index = () => {
         <h2 className="text-responsive-h2 font-bold text-foreground mb-4">
           Our Comprehensive Services
         </h2>
-        <p className="text-responsive-lg text-muted-foreground max-w-2xl mx-auto mb-10">
+        <p className="text-responsive-md text-muted-foreground max-w-2xl mx-auto mb-10">
           From exam preparation to visa assistance, we provide everything you
           need to succeed internationally.
         </p>
@@ -258,8 +262,8 @@ const Index = () => {
             },
             {
               icon: <Globe className="h-6 w-6" />,
-              title: "Immigration & Visa",
-              desc: "Complete support for study abroad, work permits, and permanent residency applications.",
+              title: "PTE & Duolingo",
+              desc: "Expert preparation for PTE Academic, Duolingo English Test, and UK Life Skills certification.",
               link: "/immigration-visa",
             },
           ].map((item, index) => (
@@ -269,7 +273,7 @@ const Index = () => {
                 className="bg-card p-6 rounded-lg shadow-sm border border-border hover:shadow-md transition-shadow cursor-pointer"
               >
                 <div className="text-primary mb-3 flex">{item.icon}</div>
-                <h3 className="text-responsive-h3 font-semibold text-foreground text-left mb-2">
+                <h3 className="text-responsive-h4 font-semibold text-foreground text-left mb-2">
                   {item.title}
                 </h3>
                 <p className="text-muted-foreground text-responsive-sm text-left">
@@ -327,7 +331,7 @@ const Index = () => {
               className="bg-card p-6 rounded-lg shadow-sm border border-border hover:shadow-md transition-shadow"
             >
               <div className="text-primary mb-3 flex">{item.icon}</div>
-              <h3 className="text-responsive-h3 font-semibold text-foreground text-left mb-2">
+              <h3 className="text-responsive-h4 font-semibold text-foreground text-left mb-2">
                 {item.title}
               </h3>
               <p className="text-muted-foreground text-responsive-sm text-left">
@@ -352,7 +356,7 @@ const Index = () => {
             <h2 className="text-responsive-h2 font-bold text-foreground mb-4">
               Choose Your Path to Success
             </h2>
-            <p className="text-responsive-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-responsive-md text-muted-foreground max-w-2xl mx-auto">
               Comprehensive programs designed to meet your specific goals,
               whether you're preparing for exams, improving communication
               skills, or planning your international move.
@@ -367,34 +371,31 @@ const Index = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {[
                 {
-                  level: "IELTS Training",
-                  image:
-                    "https://images.pexels.com/photos/6502822/pexels-photo-6502822.jpeg",
+                  level: "Beginner Level",
+                  image: beginnerImage,
                   description:
-                    "Comprehensive preparation for Academic and General Training modules with expert strategies and extensive practice.",
-                  duration: "8-12 weeks",
+                    "Perfect for those starting their English learning journey. Build foundational skills with structured lessons and guided practice.",
+                  duration: "6-8 weeks",
+                  lessons: "40+ lessons",
+                  target: "Basic Communication",
+                },
+                {
+                  level: "Intermediate Level",
+                  image: intermediateImage,
+                  description:
+                    "Advance your English skills with complex topics, advanced grammar, and real-world conversation practice.",
+                  duration: "8-10 weeks",
+                  lessons: "50+ lessons",
+                  target: "Confident Communication",
+                },
+                {
+                  level: "Professional Level",
+                  image: proImage,
+                  description:
+                    "Master advanced English for professional contexts, academic writing, and international communication excellence.",
+                  duration: "10-12 weeks",
                   lessons: "60+ lessons",
-                  target: "Band 7+ Score",
-                },
-                {
-                  level: "English Spoken",
-                  image:
-                    "https://images.pexels.com/photos/29242209/pexels-photo-29242209.jpeg",
-                  description:
-                    "Build confidence in speaking, listening, and real-world communication for professional and social contexts.",
-                  duration: "6-10 weeks",
-                  lessons: "48+ lessons",
-                  target: "Fluent Communication",
-                },
-                {
-                  level: "GRE Training",
-                  image:
-                    "https://images.pexels.com/photos/10153204/pexels-photo-10153204.jpeg",
-                  description:
-                    "Master Verbal, Quantitative, and Analytical Writing sections with proven strategies and practice tests.",
-                  duration: "10-16 weeks",
-                  lessons: "80+ lessons",
-                  target: "320+ Score",
+                  target: "Professional Mastery",
                 },
               ].map((course, index) => (
                 <motion.div
@@ -420,9 +421,7 @@ const Index = () => {
                     <span>{course.duration}</span>
                     <span>{course.lessons}</span>
                   </div>
-                  <div className="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-medium mb-4">
-                    Target: {course.target}
-                  </div>
+
                   <Link
                     to="/courses"
                     className="btn-secondary w-full py-2 px-4 rounded-lg transition-colors"
@@ -473,10 +472,10 @@ const Index = () => {
                 ></div>
               </div>
               <ImageWithSkeleton
-                src={howItWorksSvg}
-                alt="How It Works"
-                className="w-full h-auto relative z-10"
-                skeletonClassName="w-full h-auto relative z-10"
+                src={journeyImage}
+                alt="Your Journey to Success"
+                className="w-full h-96 md:h-[500px] object-cover object-center relative z-10 rounded-xl shadow-lg"
+                skeletonClassName="w-full h-96 md:h-[500px] lg:h-[600px] object-cover object-center relative z-10 rounded-lg shadow-lg"
               />
             </motion.div>
 
@@ -520,10 +519,10 @@ const Index = () => {
                     {item.step}
                   </div>
                   <div>
-                    <h3 className="text-responsive-h3 font-semibold text-foreground mb-2">
+                    <h3 className="text-responsive-h4 font-semibold text-foreground mb-2">
                       {item.title}
                     </h3>
-                    <p className="text-responsive-base text-muted-foreground">
+                    <p className="text-responsive-md text-muted-foreground">
                       {item.desc}
                     </p>
                   </div>
@@ -637,70 +636,70 @@ const Index = () => {
           >
             {[
               {
-                name: "Sarah Chen",
-                role: "Marketing Manager at Google",
-                location: "Singapore",
-                course: "IELTS Training",
+                name: "Mustafa Patel",
+                role: "Software Engineer at Microsoft",
+                location: "Mumbai, India",
+                course: "PTE Academic Preparation",
                 rating: 5,
                 image:
                   "https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg",
                 testimonial:
-                  "Fam Intl helped me achieve Band 8.5 in IELTS and secure admission to Stanford University. The trainers are exceptional!",
+                  "Fam Intl helped me achieve PTE 79 and secure admission to University of Toronto. The computer-based test simulation was incredibly helpful!",
               },
               {
-                name: "Ahmed Hassan",
-                role: "Software Engineer",
-                location: "Dubai, UAE",
-                course: "English Spoken",
+                name: "Rahul Shah",
+                role: "Data Scientist",
+                location: "Bangalore, India",
+                course: "Duolingo English Test Prep",
                 rating: 5,
                 image:
                   "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg",
                 testimonial:
-                  "The English Spoken course transformed my communication skills. I went from struggling in meetings to leading international presentations.",
+                  "Scored 135 in Duolingo and got accepted to University of British Columbia. The adaptive test strategies were game-changing.",
               },
               {
-                name: "Maria Rodriguez",
-                role: "Project Coordinator",
-                location: "Mexico City, Mexico",
-                course: "GRE Training",
+                name: "Jay Patel",
+                role: "Business Analyst",
+                location: "Delhi, India",
+                course: "UK Life Skills B1",
                 rating: 5,
                 image:
                   "https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg",
                 testimonial:
-                  "Scored 325 in GRE and got accepted to MIT! The structured approach and practice materials were invaluable.",
+                  "Passed UK Life Skills B1 on first attempt and secured my spouse visa. The real-life scenario practice was invaluable.",
               },
               {
-                name: "James Thompson",
-                role: "International Sales Director",
-                location: "London, UK",
-                course: "Immigration Support",
+                name: "Kriti Shah",
+                role: "Marketing Manager",
+                location: "Pune, India",
+                course: "IELTS Training",
                 rating: 5,
                 image:
                   "https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg",
                 testimonial:
-                  "The immigration team guided me through every step of my Canadian PR application. Professional and reliable service.",
+                  "Achieved Band 8.5 in IELTS and got admitted to London School of Economics. The speaking practice sessions were exceptional.",
               },
               {
-                name: "Li Wei",
-                role: "PhD Student",
-                location: "Beijing, China",
-                course: "IELTS Academic",
+                name: "Khushi Thakoor",
+                role: "UX Designer",
+                location: "Hyderabad, India",
+                course: "English Spoken",
                 rating: 5,
                 image:
                   "https://images.pexels.com/photos/2379006/pexels-photo-2379006.jpeg",
                 testimonial:
-                  "Achieved Band 8 in Academic IELTS and secured a full scholarship at Oxford. The course exceeded my expectations.",
+                  "The course transformed my confidence in presenting design work to international clients. Now I lead global design workshops.",
               },
               {
-                name: "Elena Volkov",
-                role: "HR Manager",
-                location: "Moscow, Russia",
-                course: "English Spoken",
+                name: "Arjun Mehta",
+                role: "Financial Analyst",
+                location: "Chennai, India",
+                course: "GRE Training",
                 rating: 5,
                 image:
                   "https://images.pexels.com/photos/1181685/pexels-photo-1181685.jpeg",
                 testimonial:
-                  "The course helped me conduct interviews in English and communicate effectively with our international offices.",
+                  "Scored 325 in GRE and secured a full scholarship at NYU Stern. The quantitative strategies were incredibly effective.",
               },
             ].map((testimonial, index) => (
               <motion.div

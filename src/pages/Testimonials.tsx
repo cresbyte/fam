@@ -105,114 +105,114 @@ const Testimonials = () => {
 
   const testimonials = [
     {
-      name: "Sarah Chen",
-      role: "Marketing Manager at Google",
-      location: "Singapore",
-      course: "Advanced Business English",
+      name: "Mustafa Patel",
+      role: "Software Engineer at Microsoft",
+      location: "Mumbai, India",
+      course: "PTE Academic Preparation",
       rating: 5,
       image:
         "https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg",
       testimonial:
-        "Faminternational transformed my career. I went from struggling in meetings to leading international presentations with confidence.",
+        "Faminternational helped me achieve PTE 79 and secure admission to University of Toronto. The computer-based test simulation was incredibly helpful!",
     },
     {
-      name: "Ahmed Hassan",
-      role: "Software Engineer",
-      location: "Dubai, UAE",
-      course: "Intermediate Conversation",
+      name: "Rahul Shah",
+      role: "Data Scientist",
+      location: "Bangalore, India",
+      course: "Duolingo English Test Prep",
       rating: 5,
       image:
         "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg",
       testimonial:
-        "Faminternational transformed my career. I went from struggling in meetings to leading international presentations with confidence.",
+        "Scored 135 in Duolingo and got accepted to University of British Columbia. The adaptive test strategies were game-changing.",
     },
     {
-      name: "Maria Rodriguez",
-      role: "Project Coordinator",
-      location: "Mexico City, Mexico",
-      course: "Business English Intensive",
+      name: "Jay Patel",
+      role: "Business Analyst",
+      location: "Delhi, India",
+      course: "UK Life Skills B1",
       rating: 5,
       image:
         "https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg",
       testimonial:
-        "Faminternational transformed my career. I went from struggling in meetings to leading international presentations with confidence.",
+        "Passed UK Life Skills B1 on first attempt and secured my spouse visa. The real-life scenario practice was invaluable.",
     },
     {
-      name: "James Thompson",
-      role: "International Sales Director",
-      location: "London, UK",
-      course: "Executive Communication",
+      name: "Kriti Shah",
+      role: "Marketing Manager",
+      location: "Pune, India",
+      course: "IELTS Training",
       rating: 5,
       image:
         "https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg",
       testimonial:
-        "As a native speaker, I thought I didn't need English lessons. But the executive communication course taught me cultural awareness.",
+        "Achieved Band 8.5 in IELTS and got admitted to London School of Economics. The speaking practice sessions were exceptional.",
     },
     {
-      name: "Li Wei",
-      role: "PhD Student",
-      location: "Beijing, China",
-      course: "Academic English",
+      name: "Khushi Thakoor",
+      role: "UX Designer",
+      location: "Hyderabad, India",
+      course: "English Spoken",
       rating: 5,
       image:
         "https://images.pexels.com/photos/2379006/pexels-photo-2379006.jpeg",
       testimonial:
-        "Faminternational helped me prepare for my PhD defense and academic conferences. The academic writing modules were invaluable.",
+        "The course transformed my confidence in presenting design work to international clients. Now I lead global design workshops.",
     },
     {
-      name: "Elena Volkov",
-      role: "HR Manager",
-      location: "Moscow, Russia",
-      course: "Professional English",
+      name: "Arjun Mehta",
+      role: "Financial Analyst",
+      location: "Chennai, India",
+      course: "GRE Training",
       rating: 5,
       image:
         "https://images.pexels.com/photos/1181685/pexels-photo-1181685.jpeg",
       testimonial:
-        "The course helped me conduct interviews in English and communicate with our international offices.",
+        "Scored 325 in GRE and secured a full scholarship at NYU Stern. The quantitative strategies were incredibly effective.",
     },
     {
-      name: "David Kim",
-      role: "Financial Analyst",
-      location: "Seoul, South Korea",
+      name: "Priya Sharma",
+      role: "Project Manager",
+      location: "Kolkata, India",
       course: "Business English",
       rating: 5,
       image:
         "https://images.pexels.com/photos/2379007/pexels-photo-2379007.jpeg",
       testimonial:
-        "The business vocabulary and presentation skills I learned helped me secure a position at a multinational corporation.",
+        "Now I confidently lead international teams and conduct client meetings in English. The business vocabulary was perfect.",
     },
     {
-      name: "Anna Kowalski",
-      role: "UX Designer",
-      location: "Warsaw, Poland",
-      course: "Conversational English",
+      name: "Vikram Singh",
+      role: "Research Scientist",
+      location: "Ahmedabad, India",
+      course: "Academic English",
       rating: 5,
       image:
         "https://images.pexels.com/photos/1181687/pexels-photo-1181687.jpeg",
       testimonial:
-        "I gained confidence in presenting my design work to international clients and collaborating with global teams.",
+        "Published my research in top international journals. The academic writing and presentation skills were invaluable.",
     },
     {
-      name: "Carlos Mendez",
-      role: "Operations Manager",
-      location: "Barcelona, Spain",
+      name: "Anjali Desai",
+      role: "HR Director",
+      location: "Gurgaon, India",
       course: "Professional Communication",
       rating: 5,
       image:
         "https://images.pexels.com/photos/2379008/pexels-photo-2379008.jpeg",
       testimonial:
-        "The course improved my ability to lead international teams and manage cross-cultural projects effectively.",
+        "I now conduct interviews in English and manage our global HR operations with confidence and cultural sensitivity.",
     },
     {
-      name: "Yuki Tanaka",
-      role: "Marketing Specialist",
-      location: "Tokyo, Japan",
-      course: "Business English",
+      name: "Rohan Kapoor",
+      role: "Sales Director",
+      location: "Noida, India",
+      course: "Executive Communication",
       rating: 5,
       image:
         "https://images.pexels.com/photos/1181688/pexels-photo-1181688.jpeg",
       testimonial:
-        "I learned to create compelling marketing content in English and present to international stakeholders.",
+        "The executive communication course helped me secure major international clients and lead global sales teams effectively.",
     },
   ];
 

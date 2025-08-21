@@ -14,8 +14,10 @@ const Footer = () => {
               </span>
             </Link>
             <p className="text-responsive-base text-muted-foreground mb-6 max-w-md">
-              Your gateway to global opportunities through expert IELTS training, English spoken courses, 
-              GRE preparation, and comprehensive immigration support. Empowering students worldwide to achieve their dreams.
+              Your gateway to global opportunities through expert IELTS
+              training, English spoken courses, GRE preparation, and
+              comprehensive immigration support. Empowering students worldwide
+              to achieve their dreams.
             </p>
             <div className="flex space-x-4">
               <a
@@ -101,26 +103,24 @@ const Footer = () => {
               <li className="flex items-center gap-2">
                 <Mail className="h-4 w-4 text-primary" />
                 <a
-                  href="mailto:info@englishflow.com"
+                  href="mailto:faminternational.shop@gmail.com"
                   className="text-muted-foreground hover:text-primary transition-colors"
                 >
-                  info@englishflow.com
+                  faminternational.shop@gmail.com
                 </a>
               </li>
               <li className="flex items-center gap-2">
                 <Phone className="h-4 w-4 text-primary" />
                 <a
-                  href="tel:+15551234567"
+                  href="tel:+91 7984670963"
                   className="text-muted-foreground hover:text-primary transition-colors"
                 >
-                  +1 (555) 123-4567
+                  +91 7984670963
                 </a>
               </li>
               <li className="flex items-center gap-2">
                 <MapPin className="h-4 w-4 text-primary" />
-                <span className="text-muted-foreground">
-                  Global Offices
-                </span>
+                <span className="text-muted-foreground">Global Offices</span>
               </li>
             </ul>
           </div>
@@ -128,7 +128,8 @@ const Footer = () => {
 
         <div className="border-t border-border mt-8 pt-8 text-center">
           <p className="text-responsive-sm text-muted-foreground mb-2">
-            Empowering students worldwide to achieve their international dreams through quality education and comprehensive support.
+            Empowering students worldwide to achieve their international dreams
+            through quality education and comprehensive support.
           </p>
           <p className="text-responsive-sm text-muted-foreground">
             © {new Date().getFullYear()} Fam International. All rights reserved.

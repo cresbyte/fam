@@ -12,6 +12,13 @@ import {
   Building,
   Plane,
   Shield,
+  BookOpen,
+  Headphones,
+  Mic,
+  Monitor,
+  Target,
+  Calendar,
+  Star,
 } from "lucide-react";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
@@ -49,7 +56,162 @@ const useScrollAnimation = () => {
 };
 
 const ImmigrationVisa = () => {
-  const services = [
+  const pteServices = [
+    {
+      icon: <Monitor className="h-8 w-8" />,
+      title: "PTE Academic Preparation",
+      description:
+        "Comprehensive preparation for PTE Academic test covering all four skills: Speaking, Writing, Reading, and Listening.",
+      features: [
+        "Computer-based test simulation",
+        "AI scoring system training",
+        "Time management strategies",
+        "Real exam question practice",
+        "Score improvement techniques",
+        "Personalized feedback system",
+      ],
+      duration: "6-8 weeks",
+      target: "PTE 65+ Score",
+      price: "From $299",
+    },
+    {
+      icon: <Mic className="h-8 w-8" />,
+      title: "Speaking & Pronunciation",
+      description:
+        "Specialized training for PTE Speaking section with focus on pronunciation, fluency, and content development.",
+      features: [
+        "Pronunciation correction",
+        "Fluency enhancement",
+        "Content organization",
+        "Response timing practice",
+        "Accent neutralization",
+        "Confidence building",
+      ],
+      duration: "4-6 weeks",
+      target: "Speaking 65+",
+    },
+    {
+      icon: <BookOpen className="h-8 w-8" />,
+      title: "Reading & Writing Mastery",
+      description:
+        "Advanced strategies for PTE Reading and Writing sections with extensive practice materials.",
+      features: [
+        "Reading comprehension techniques",
+        "Essay writing strategies",
+        "Grammar and vocabulary",
+        "Time management skills",
+        "Question type analysis",
+        "Mock test practice",
+      ],
+      duration: "5-7 weeks",
+      target: "Reading & Writing 65+",
+    },
+  ];
+
+  const duolingoServices = [
+    {
+      icon: <Target className="h-8 w-8" />,
+      title: "Duolingo English Test Prep",
+      description:
+        "Complete preparation for Duolingo English Test with adaptive learning and computer-adaptive test strategies.",
+      features: [
+        "Adaptive test simulation",
+        "Question type mastery",
+        "Time pressure training",
+        "Score prediction tools",
+        "Personalized study plans",
+        "Progress tracking system",
+      ],
+      duration: "4-6 weeks",
+      target: "DET 120+ Score",
+    },
+    {
+      icon: <Headphones className="h-8 w-8" />,
+      title: "Listening & Speaking Focus",
+      description:
+        "Intensive training for Duolingo listening and speaking components with real-world scenarios.",
+      features: [
+        "Listening comprehension",
+        "Speaking fluency",
+        "Pronunciation accuracy",
+        "Response preparation",
+        "Audio analysis skills",
+        "Interactive practice sessions",
+      ],
+      duration: "3-5 weeks",
+      target: "Listening & Speaking 120+",
+     
+    },
+    {
+      icon: <FileText className="h-8 w-8" />,
+      title: "Literacy & Comprehension",
+      description:
+        "Comprehensive literacy training covering reading, writing, and comprehension skills for Duolingo test.",
+      features: [
+        "Reading strategies",
+        "Writing techniques",
+        "Vocabulary building",
+        "Grammar mastery",
+        "Comprehension skills",
+        "Practice exercises",
+      ],
+      duration: "4-6 weeks",
+      target: "Literacy 120+",
+    },
+  ];
+
+  const ukLifeSkillsServices = [
+    {
+      icon: <Shield className="h-8 w-8" />,
+      title: "UK Life Skills A1",
+      description:
+        "Preparation for UK Life Skills A1 test required for family visa applications and settlement.",
+      features: [
+        "Basic conversation skills",
+        "Everyday vocabulary",
+        "Simple question responses",
+        "Listening comprehension",
+        "Speaking confidence",
+        "Test format practice",
+      ],
+      duration: "3-4 weeks",
+      target: "A1 Pass",
+    },
+    {
+      icon: <Users className="h-8 w-8" />,
+      title: "UK Life Skills B1",
+      description:
+        "Advanced preparation for UK Life Skills B1 test required for citizenship and permanent residency.",
+      features: [
+        "Intermediate conversation",
+        "Complex vocabulary",
+        "Detailed responses",
+        "Advanced listening",
+        "Fluency development",
+        "Real-life scenarios",
+      ],
+      duration: "4-6 weeks",
+      target: "B1 Pass",
+    },
+    {
+      icon: <Award className="h-8 w-8" />,
+      title: "Life Skills Test Practice",
+      description:
+        "Comprehensive practice sessions and mock tests to ensure success in UK Life Skills examinations.",
+      features: [
+        "Mock test simulations",
+        "Examiner feedback",
+        "Performance analysis",
+        "Weakness identification",
+        "Improvement strategies",
+        "Confidence building",
+      ],
+      duration: "2-3 weeks",
+      target: "Test Ready",
+    },
+  ];
+
+  const immigrationServices = [
     {
       icon: <FileText className="h-8 w-8" />,
       title: "Visa Application Support",
@@ -207,8 +369,8 @@ const ImmigrationVisa = () => {
             transition={{ delay: 0.2, duration: 0.7 }}
             className="text-responsive-h1 font-bold text-foreground mb-6"
           >
-            Your Gateway to{" "}
-            <span className="gradient-text">Global Opportunities</span>
+            Master English Tests for{" "}
+            <span className="gradient-text">Immigration Success</span>
           </motion.h1>
           <motion.p
             initial={{ y: 20, opacity: 0 }}
@@ -216,40 +378,126 @@ const ImmigrationVisa = () => {
             transition={{ delay: 0.4, duration: 0.7 }}
             className="text-responsive-lg text-muted-foreground leading-relaxed mb-8"
           >
-            Expert immigration and visa support services to help you study,
-            work, and live abroad. Our experienced consultants guide you through
-            every step of your international journey.
+            Expert preparation for PTE Academic, Duolingo English Test, and UK
+            Life Skills to help you achieve your immigration goals. Plus
+            comprehensive visa and settlement support services.
           </motion.p>
-          <motion.div
-            initial={{ y: 20, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ delay: 0.6, duration: 0.7 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center"
-          >
-            <Link
-              to="/contact"
-              className="btn-primary px-8 py-3 rounded-lg font-semibold transition-colors"
-            >
-              Start Your Journey
-            </Link>
-            <Link
-              to="/courses"
-              className="btn-secondary px-8 py-3 rounded-lg font-semibold transition-colors"
-            >
-              View Our Courses
-            </Link>
-          </motion.div>
+        
         </div>
       </motion.section>
 
-      {/* Services Overview */}
+      {/* PTE, Duolingo, & UK Life Skills */}
       <motion.section
         ref={useScrollAnimation()[0]}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: "-100px" }}
         variants={staggerContainer}
-        className="section-spacing bg-gradient-to-r from-primary/5 to-secondary/5 border-y border-border"
+        className="section-spacing   border-border"
+      >
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+       
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {pteServices.map((service, index) => (
+              <motion.div
+                key={index}
+                variants={fadeInUp}
+                custom={index + 1}
+                className="card-minimal bg-white/80 backdrop-blur-sm border border-border rounded-lg p-6 shadow-sm hover:shadow-lg transition-all"
+              >
+                <h3 className="text-responsive-h3 font-semibold text-foreground mb-4">
+                  {service.title}
+                </h3>
+                <p className="text-muted-foreground mb-6 leading-relaxed">
+                  {service.description}
+                </p>
+                <ul className="space-y-2">
+                  {service.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center gap-2">
+                      <CheckCircle className="h-4 w-4 text-primary flex-shrink-0" />
+                      <span className="text-responsive-sm text-muted-foreground">
+                        {feature}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+                <div className="mt-6 text-sm text-muted-foreground">
+                  <p>Duration: {service.duration}</p>
+                  <p>Target Score: {service.target}</p>
+                </div>
+              </motion.div>
+            ))}
+            {duolingoServices.map((service, index) => (
+              <motion.div
+                key={index}
+                variants={fadeInUp}
+                custom={index + 1}
+                className="card-minimal bg-white/80 backdrop-blur-sm border border-border rounded-lg p-6 shadow-sm hover:shadow-lg transition-all"
+              >
+                <h3 className="text-responsive-h3 font-semibold text-foreground mb-4">
+                  {service.title}
+                </h3>
+                <p className="text-muted-foreground mb-6 leading-relaxed">
+                  {service.description}
+                </p>
+                <ul className="space-y-2">
+                  {service.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center gap-2">
+                      <CheckCircle className="h-4 w-4 text-primary flex-shrink-0" />
+                      <span className="text-responsive-sm text-muted-foreground">
+                        {feature}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+                <div className="mt-6 text-sm text-muted-foreground">
+                  <p>Duration: {service.duration}</p>
+                  <p>Target Score: {service.target}</p>
+                </div>
+              </motion.div>
+            ))}
+            {ukLifeSkillsServices.map((service, index) => (
+              <motion.div
+                key={index}
+                variants={fadeInUp}
+                custom={index + 1}
+                className="card-minimal bg-white/80 backdrop-blur-sm border border-border rounded-lg p-6 shadow-sm hover:shadow-lg transition-all"
+              >
+                <h3 className="text-responsive-h3 font-semibold text-foreground mb-4">
+                  {service.title}
+                </h3>
+                <p className="text-muted-foreground mb-6 leading-relaxed">
+                  {service.description}
+                </p>
+                <ul className="space-y-2">
+                  {service.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center gap-2">
+                      <CheckCircle className="h-4 w-4 text-primary flex-shrink-0" />
+                      <span className="text-responsive-sm text-muted-foreground">
+                        {feature}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+                <div className="mt-6 text-sm text-muted-foreground">
+                  <p>Duration: {service.duration}</p>
+                  <p>Target Score: {service.target}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </motion.section>
+
+      {/* Immigration Services */}
+      <motion.section
+        ref={useScrollAnimation()[0]}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: "-100px" }}
+        variants={staggerContainer}
+        className="section-spacing bg-gradient-to-r from-secondary/5 to-primary/5 border-y border-border"
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -267,14 +515,13 @@ const ImmigrationVisa = () => {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {services.map((service, index) => (
+            {immigrationServices.map((service, index) => (
               <motion.div
                 key={index}
                 variants={fadeInUp}
                 custom={index + 1}
                 className="card-minimal bg-white/80 backdrop-blur-sm border border-border rounded-lg p-6 shadow-sm hover:shadow-lg transition-all"
               >
-                <div className="text-primary mb-4 flex">{service.icon}</div>
                 <h3 className="text-responsive-h3 font-semibold text-foreground mb-4">
                   {service.title}
                 </h3>

@@ -109,8 +109,8 @@ const Navigation = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center">
-            <span className="text-responsive-h2 font-bold text-foreground">
-              FamIntl
+            <span className="text-responsive-h2 font-bold bg-gradient-to-br from-black via-black via-slate-900 via-slate-800 to-blue-600 bg-clip-text text-transparent hover:from-blue-600 hover:to-blue-800 transition-all duration-500">
+              FamInternational
             </span>
           </Link>
 
@@ -194,8 +194,8 @@ const Navigation = () => {
               {/* Header */}
               <div className="flex justify-between items-center mb-8">
                 <div className="flex items-center gap-2">
-                  <div className="text-primary font-bold text-lg">
-                    FamIntl
+                  <div className="text-lg font-bold bg-gradient-to-br from-black via-black via-slate-900 via-slate-800 to-blue-600 bg-clip-text text-transparent">
+                    FamInternational
                   </div>
                 </div>
                 <button

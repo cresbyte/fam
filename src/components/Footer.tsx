@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Facebook, Twitter, Instagram, Linkedin, Youtube } from "lucide-react";
+import { Facebook, Twitter, Instagram, Linkedin, Youtube, Mail, Phone, MapPin } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -10,12 +10,12 @@ const Footer = () => {
           <div className="col-span-1 md:col-span-2">
             <Link to="/" className="flex items-center mb-4">
               <span className="text-responsive-h2 font-bold text-foreground">
-                Faminternational
+                Fam International
               </span>
             </Link>
             <p className="text-responsive-base text-muted-foreground mb-6 max-w-md">
-              Professional English coaching platform helping individuals and
-              teams achieve global communication success.
+              Your gateway to global opportunities through expert IELTS training, English spoken courses, 
+              GRE preparation, and comprehensive immigration support. Empowering students worldwide to achieve their dreams.
             </p>
             <div className="flex space-x-4">
               <a
@@ -54,89 +54,84 @@ const Footer = () => {
           {/* Quick Links */}
           <div>
             <h3 className="text-responsive-h3 font-semibold text-foreground mb-4">
-              Quick Links
+              Our Services
             </h3>
             <ul className="space-y-3">
               <li>
                 <Link
-                  to="/courses"
+                  to="/courses#ielts"
                   className="text-muted-foreground hover:text-primary transition-colors"
                 >
-                  Courses
+                  IELTS Training
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/how-it-works"
+                  to="/courses#english-spoken"
                   className="text-muted-foreground hover:text-primary transition-colors"
                 >
-                  How It Works
+                  English Spoken
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/testimonials"
+                  to="/courses#gre"
                   className="text-muted-foreground hover:text-primary transition-colors"
                 >
-                  Testimonials
+                  GRE Training
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/about"
+                  to="/immigration-visa"
                   className="text-muted-foreground hover:text-primary transition-colors"
                 >
-                  About Us
+                  Immigration & Visa
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* Support */}
+          {/* Contact Info */}
           <div>
             <h3 className="text-responsive-h3 font-semibold text-foreground mb-4">
-              Support
+              Contact Us
             </h3>
             <ul className="space-y-3">
-              <li>
-                <Link
-                  to="/contact"
-                  className="text-muted-foreground hover:text-primary transition-colors"
-                >
-                  Contact Us
-                </Link>
-              </li>
-              <li>
+              <li className="flex items-center gap-2">
+                <Mail className="h-4 w-4 text-primary" />
                 <a
-                  href="#"
+                  href="mailto:info@englishflow.com"
                   className="text-muted-foreground hover:text-primary transition-colors"
                 >
-                  Help Center
+                  info@englishflow.com
                 </a>
               </li>
-              <li>
+              <li className="flex items-center gap-2">
+                <Phone className="h-4 w-4 text-primary" />
                 <a
-                  href="#"
+                  href="tel:+15551234567"
                   className="text-muted-foreground hover:text-primary transition-colors"
                 >
-                  Privacy Policy
+                  +1 (555) 123-4567
                 </a>
               </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-muted-foreground hover:text-primary transition-colors"
-                >
-                  Terms of Service
-                </a>
+              <li className="flex items-center gap-2">
+                <MapPin className="h-4 w-4 text-primary" />
+                <span className="text-muted-foreground">
+                  Global Offices
+                </span>
               </li>
             </ul>
           </div>
         </div>
 
         <div className="border-t border-border mt-8 pt-8 text-center">
+          <p className="text-responsive-sm text-muted-foreground mb-2">
+            Empowering students worldwide to achieve their international dreams through quality education and comprehensive support.
+          </p>
           <p className="text-responsive-sm text-muted-foreground">
-            © 2025 Faminternational. All rights reserved.
+            © {new Date().getFullYear()} Fam International. All rights reserved.
           </p>
         </div>
       </div>

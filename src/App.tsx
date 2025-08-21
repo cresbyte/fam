@@ -7,52 +7,54 @@ import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";
 import Index from "./pages/Index";
 import Courses from "./pages/Courses";
+import IELTS from "./pages/IELTS";
+import EnglishSpoken from "./pages/EnglishSpoken";
+import GRE from "./pages/GRE";
 import About from "./pages/About";
-import HowItWorks from "./pages/HowItWorks";
-import Testimonials from "./pages/Testimonials";
+import ImmigrationVisa from "./pages/ImmigrationVisa";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import { useEffect } from "react";
 
 const queryClient = new QueryClient();
 
-
 const App = () => {
-
   const location = useLocation();
-  
-const scrollToTop = () => {
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth",
-  });
-};
 
-useEffect(() => {
-  scrollToTop();
-}, [location.pathname]);
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
+  useEffect(() => {
+    scrollToTop();
+  }, [location.pathname]);
   return (
-  <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
+    <QueryClientProvider client={queryClient}>
+      <TooltipProvider>
+        <Toaster />
+        <Sonner />
         <div className="min-h-screen flex flex-col">
           <Navigation />
           <main className="flex-1">
             <Routes>
               <Route path="/" element={<Index />} />
               <Route path="/courses" element={<Courses />} />
+              <Route path="/ielts" element={<IELTS />} />
+              <Route path="/english-spoken" element={<EnglishSpoken />} />
+              <Route path="/gre" element={<GRE />} />
+              <Route path="/immigration-visa" element={<ImmigrationVisa />} />
               <Route path="/about" element={<About />} />
-              <Route path="/how-it-works" element={<HowItWorks />} />
-              <Route path="/testimonials" element={<Testimonials />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </main>
           <Footer />
         </div>
-    </TooltipProvider>
-  </QueryClientProvider>
+      </TooltipProvider>
+    </QueryClientProvider>
   );
 };
 

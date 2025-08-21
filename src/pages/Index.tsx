@@ -8,6 +8,10 @@ import {
   Clock,
   GraduationCap,
   BarChart3,
+  Globe,
+  BookOpen,
+  MessageCircle,
+  FileText,
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import howItWorksSvg from "../components/how-it-works.svg";
@@ -126,26 +130,29 @@ const Index = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="text-center lg:text-left">
               <h1 className="text-responsive-hero text-foreground mb-6">
-                Learn English.{" "}
-                <span className="gradient-text">Speak Confidently.</span>{" "}
-                Succeed Globally.
+                Master English.{" "}
+                <span className="gradient-text">Ace Your Exams.</span> Go
+                Global.
               </h1>
               <p className="text-responsive-lg text-muted-foreground mb-8 leading-relaxed max-w-xl mx-auto lg:mx-0">
-                Professional English coaching with personalized learning plans,
-                expert guidance, and proven results. Join thousands who've
-                achieved fluency and career success.
+                Expert IELTS Training, English Spoken courses, GRE preparation,
+                and Immigration & Visa support. Join thousands who've achieved
+                their dreams of studying and working abroad.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                 <Link
                   to="/contact"
                   className="btn-primary px-6 py-3 rounded-lg font-medium transition-colors"
                 >
-                  Start Today
+                  Enroll Now
                 </Link>
-                <button className="btn-secondary flex items-center justify-center gap-2 px-6 py-3 rounded-lg font-medium transition-colors">
-                  <Play className="h-5 w-5" />
-                  Watch Demo
-                </button>
+                <Link
+                  to="/contact"
+                  className="btn-secondary flex items-center justify-center gap-2 px-6 py-3 rounded-lg font-medium transition-colors"
+                >
+                  <MessageCircle className="h-5 w-5" />
+                  Contact Us
+                </Link>
               </div>
               <div className="flex items-center gap-6 mt-8 justify-center lg:justify-start">
                 <div className="flex items-center gap-2">
@@ -189,7 +196,7 @@ const Index = () => {
                   <div>
                     <div className="font-semibold text-foreground">24K+</div>
                     <div className="text-sm text-muted-foreground">
-                      Happy Students
+                      Successful Students
                     </div>
                   </div>
                 </div>
@@ -212,7 +219,69 @@ const Index = () => {
         </div>
       </motion.section>
 
-      {/* Why Choose Us? - Authority Section */}
+      {/* Our Services */}
+      <motion.section
+        ref={useFadeUp()[0]}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: "-100px" }}
+        variants={fadeUp}
+        className="section-spacing max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center"
+      >
+        <h2 className="text-responsive-h2 font-bold text-foreground mb-4">
+          Our Comprehensive Services
+        </h2>
+        <p className="text-responsive-lg text-muted-foreground max-w-2xl mx-auto mb-10">
+          From exam preparation to visa assistance, we provide everything you
+          need to succeed internationally.
+        </p>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {[
+            {
+              icon: <GraduationCap className="h-6 w-6" />,
+              title: "IELTS Training",
+              desc: "Expert preparation for Academic and General Training modules with proven strategies and tests.",
+              link: "/ielts",
+            },
+            {
+              icon: <MessageCircle className="h-6 w-6" />,
+              title: "English Spoken",
+              desc: "Improve your conversational skills, pronunciation, and fluency for real-world communication.",
+              link: "/english-spoken",
+            },
+            {
+              icon: <BookOpen className="h-6 w-6" />,
+              title: "GRE Training",
+              desc: "Comprehensive GRE preparation covering Verbal, Quantitative, and Analytical Writing sections.",
+              link: "/gre",
+            },
+            {
+              icon: <Globe className="h-6 w-6" />,
+              title: "Immigration & Visa",
+              desc: "Complete support for study abroad, work permits, and permanent residency applications.",
+              link: "/immigration-visa",
+            },
+          ].map((item, index) => (
+            <Link key={index} to={item.link}>
+              <motion.div
+                variants={itemVariants}
+                className="bg-card p-6 rounded-lg shadow-sm border border-border hover:shadow-md transition-shadow cursor-pointer"
+              >
+                <div className="text-primary mb-3 flex">{item.icon}</div>
+                <h3 className="text-responsive-h3 font-semibold text-foreground text-left mb-2">
+                  {item.title}
+                </h3>
+                <p className="text-muted-foreground text-responsive-sm text-left">
+                  {item.desc}
+                </p>
+              </motion.div>
+            </Link>
+          ))}
+        </div>
+      </motion.section>
+
+      {/* Why Choose Us */}
       <motion.section
         ref={useFadeUp()[0]}
         initial="hidden"
@@ -225,41 +294,39 @@ const Index = () => {
           Why 24,000+ Students Trust Us
         </h2>
         <p className="text-responsive-lg text-muted-foreground max-w-2xl mx-auto mb-10">
-          We combine expert teaching, science-backed methods, and real-world
-          results.
+          We combine expert teaching, proven methodologies, and comprehensive
+          support to ensure your success.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {[
             {
               icon: <Award className="h-6 w-6" />,
-              title: "Certified Teachers",
-              desc: "All instructors hold TEFL/TESOL certifications and 5+ years of experience.",
+              title: "Expert Trainers",
+              desc: "All instructors hold advanced degrees and certifications with 5+ years of specialized experience.",
             },
             {
               icon: <Clock className="h-6 w-6" />,
-              title: "Flexible Scheduling",
-              desc: "Learn anytime, anywhere with 24/7 class availability across time zones.",
+              title: "Flexible Learning",
+              desc: "Learn at your own pace with 24/7 access to materials and flexible class scheduling.",
             },
             {
-              icon: <GraduationCap className="h-6 w-6" />,
-              title: "Partnerships",
-              desc: "Recognized by top institutions professional development.",
+              icon: <Globe className="h-6 w-6" />,
+              title: "Global Opportunities",
+              desc: "Direct pathways to universities and employers in USA, UK, Canada, Australia, and more.",
             },
             {
               icon: <BarChart3 className="h-6 w-6" />,
               title: "Proven Results",
-              desc: "94% of students improve by at least one CEFR level in 3 months.",
+              desc: "94% of students achieve their target scores and successfully secure international opportunities.",
             },
           ].map((item, index) => (
             <motion.div
               key={index}
               variants={itemVariants}
-              className="bg-card p-6 rounded-lg shadow-sm border border-border hover:shadow-md transition-shadow "
+              className="bg-card p-6 rounded-lg shadow-sm border border-border hover:shadow-md transition-shadow"
             >
-              <div className="text-primary mb-3 flex ">
-                {item.icon}
-              </div>
+              <div className="text-primary mb-3 flex">{item.icon}</div>
               <h3 className="text-responsive-h3 font-semibold text-foreground text-left mb-2">
                 {item.title}
               </h3>
@@ -271,7 +338,7 @@ const Index = () => {
         </div>
       </motion.section>
 
-      {/* Learning Levels */}
+      {/* Course Overview */}
       <motion.section
         ref={useFadeUp()[0]}
         initial="hidden"
@@ -283,11 +350,12 @@ const Index = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-responsive-h2 font-bold text-foreground mb-4">
-              Choose Your Learning Path
+              Choose Your Path to Success
             </h2>
             <p className="text-responsive-lg text-muted-foreground max-w-2xl mx-auto">
-              Structured courses designed for every skill level, from basic
-              conversation to advanced business English.
+              Comprehensive programs designed to meet your specific goals,
+              whether you're preparing for exams, improving communication
+              skills, or planning your international move.
             </p>
           </div>
           <motion.div
@@ -299,31 +367,34 @@ const Index = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {[
                 {
-                  level: "Beginner",
+                  level: "IELTS Training",
                   image:
                     "https://images.pexels.com/photos/6502822/pexels-photo-6502822.jpeg",
                   description:
-                    "Start your English journey with fundamentals, basic vocabulary, and simple conversations.",
-                  duration: "3-6 months",
-                  lessons: "48 lessons",
+                    "Comprehensive preparation for Academic and General Training modules with expert strategies and extensive practice.",
+                  duration: "8-12 weeks",
+                  lessons: "60+ lessons",
+                  target: "Band 7+ Score",
                 },
                 {
-                  level: "Intermediate",
+                  level: "English Spoken",
                   image:
                     "https://images.pexels.com/photos/29242209/pexels-photo-29242209.jpeg",
                   description:
-                    "Build confidence with complex grammar, professional vocabulary, and fluent conversations.",
-                  duration: "4-8 months",
-                  lessons: "64 lessons",
+                    "Build confidence in speaking, listening, and real-world communication for professional and social contexts.",
+                  duration: "6-10 weeks",
+                  lessons: "48+ lessons",
+                  target: "Fluent Communication",
                 },
                 {
-                  level: "Advanced",
+                  level: "GRE Training",
                   image:
                     "https://images.pexels.com/photos/10153204/pexels-photo-10153204.jpeg",
                   description:
-                    "Master business English, presentations, negotiations, and cultural communication nuances.",
-                  duration: "6-12 months",
-                  lessons: "80 lessons",
+                    "Master Verbal, Quantitative, and Analytical Writing sections with proven strategies and practice tests.",
+                  duration: "10-16 weeks",
+                  lessons: "80+ lessons",
+                  target: "320+ Score",
                 },
               ].map((course, index) => (
                 <motion.div
@@ -348,6 +419,9 @@ const Index = () => {
                   <div className="flex justify-between text-responsive-sm text-muted-foreground mb-6">
                     <span>{course.duration}</span>
                     <span>{course.lessons}</span>
+                  </div>
+                  <div className="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-medium mb-4">
+                    Target: {course.target}
                   </div>
                   <Link
                     to="/courses"
@@ -374,11 +448,11 @@ const Index = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-responsive-h2 font-bold text-foreground mb-4">
-              How It Works
+              Your Journey to Success
             </h2>
             <p className="text-responsive-lg text-muted-foreground max-w-2xl mx-auto">
-              Our proven 5-step method ensures rapid progress and lasting
-              results.
+              Our proven 5-step process ensures you achieve your goals
+              efficiently and effectively.
             </p>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -413,28 +487,28 @@ const Index = () => {
               {[
                 {
                   step: "1",
-                  title: "Placement Test",
-                  desc: "Assess your current level with our comprehensive evaluation",
+                  title: "Assessment & Planning",
+                  desc: "Evaluate your current level and create a personalized roadmap to your goals",
                 },
                 {
                   step: "2",
-                  title: "Custom Plan",
-                  desc: "Get a personalized learning path tailored to your goals",
+                  title: "Structured Learning",
+                  desc: "Follow our proven curriculum with expert guidance and regular progress checks",
                 },
                 {
                   step: "3",
-                  title: "Live Classes",
-                  desc: "Join interactive group sessions with expert teachers",
+                  title: "Practice & Application",
+                  desc: "Apply your skills through real-world scenarios and extensive practice materials",
                 },
                 {
                   step: "4",
-                  title: "Practice & Feedback",
-                  desc: "Receive real-time corrections and detailed feedback",
+                  title: "Mock Tests & Feedback",
+                  desc: "Take practice exams and receive detailed feedback for continuous improvement",
                 },
                 {
                   step: "5",
-                  title: "Certification",
-                  desc: "Earn recognized achievements and track your progress",
+                  title: "Achievement & Next Steps",
+                  desc: "Reach your target score and get guidance on your next steps",
                 },
               ].map((item, index) => (
                 <motion.div
@@ -458,8 +532,8 @@ const Index = () => {
             </motion.div>
           </div>
           <div className="text-center mt-12">
-            <Link to="/how-it-works" className="btn-secondary">
-              Learn More About Our Method
+            <Link to="/immigration-visa" className="btn-secondary">
+              Learn About Immigration Support
             </Link>
           </div>
         </div>
@@ -476,22 +550,22 @@ const Index = () => {
       >
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-12">
           <h2 className="text-responsive-h2 font-bold text-foreground mb-4">
-            Real Results, Real Impact
+            Real Results, Real Success
           </h2>
           <p className="text-responsive-lg text-muted-foreground max-w-2xl mx-auto mb-10">
-            See how our students have transformed their lives through English
-            fluency.
+            See how our students have transformed their lives and achieved their
+            international dreams.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { number: "94%", label: "improved by 1+ CEFR level in 3 months" },
+              { number: "94%", label: "achieve target scores in IELTS/GRE" },
               {
-                number: "4.8",
-                label: "average speaking score increase (TOEFL/IELTS)",
+                number: "4.9",
+                label: "average student satisfaction rating",
               },
               {
-                number: "78%",
-                label: "received promotions after course completion",
+                number: "89%",
+                label: "successfully secure international opportunities",
               },
             ].map((stat, index) => (
               <motion.div
@@ -526,8 +600,8 @@ const Index = () => {
               What Our Students Say
             </h2>
             <p className="text-responsive-lg text-muted-foreground">
-              Hear from professionals who transformed their careers with
-              Faminternational.
+              Hear from professionals who transformed their careers with English
+              Flow International.
             </p>
           </div>
 
@@ -566,67 +640,67 @@ const Index = () => {
                 name: "Sarah Chen",
                 role: "Marketing Manager at Google",
                 location: "Singapore",
-                course: "Advanced Business English",
+                course: "IELTS Training",
                 rating: 5,
                 image:
                   "https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg",
                 testimonial:
-                  "Faminternational transformed my career. I went from struggling in meetings to leading international presentations with confidence.",
+                  "Fam Intl helped me achieve Band 8.5 in IELTS and secure admission to Stanford University. The trainers are exceptional!",
               },
               {
                 name: "Ahmed Hassan",
                 role: "Software Engineer",
                 location: "Dubai, UAE",
-                course: "Intermediate Conversation",
+                course: "English Spoken",
                 rating: 5,
                 image:
                   "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg",
                 testimonial:
-                  "The teachers are incredibly patient and professional. I went from beginner to confident speaker in just 8 months.",
+                  "The English Spoken course transformed my communication skills. I went from struggling in meetings to leading international presentations.",
               },
               {
                 name: "Maria Rodriguez",
                 role: "Project Coordinator",
                 location: "Mexico City, Mexico",
-                course: "Business English Intensive",
+                course: "GRE Training",
                 rating: 5,
                 image:
                   "https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg",
                 testimonial:
-                  "Flexible scheduling and personalized lessons made it easy to fit learning into my busy schedule.",
+                  "Scored 325 in GRE and got accepted to MIT! The structured approach and practice materials were invaluable.",
               },
               {
                 name: "James Thompson",
                 role: "International Sales Director",
                 location: "London, UK",
-                course: "Executive Communication",
+                course: "Immigration Support",
                 rating: 5,
                 image:
                   "https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg",
                 testimonial:
-                  "As a native speaker, I thought I didn't need English lessons. But the executive communication course taught me cultural awareness.",
+                  "The immigration team guided me through every step of my Canadian PR application. Professional and reliable service.",
               },
               {
                 name: "Li Wei",
                 role: "PhD Student",
                 location: "Beijing, China",
-                course: "Academic English",
+                course: "IELTS Academic",
                 rating: 5,
                 image:
                   "https://images.pexels.com/photos/2379006/pexels-photo-2379006.jpeg",
                 testimonial:
-                  "Faminternational helped me prepare for my PhD defense and academic conferences. The academic writing modules were invaluable.",
+                  "Achieved Band 8 in Academic IELTS and secured a full scholarship at Oxford. The course exceeded my expectations.",
               },
               {
                 name: "Elena Volkov",
                 role: "HR Manager",
                 location: "Moscow, Russia",
-                course: "Professional English",
+                course: "English Spoken",
                 rating: 5,
                 image:
                   "https://images.pexels.com/photos/1181685/pexels-photo-1181685.jpeg",
                 testimonial:
-                  "The course helped me conduct interviews in English and communicate with our international offices.",
+                  "The course helped me conduct interviews in English and communicate effectively with our international offices.",
               },
             ].map((testimonial, index) => (
               <motion.div
@@ -678,8 +752,8 @@ const Index = () => {
           </Carousel>
 
           <div className="text-center mt-8">
-            <Link to="/testimonials" className="btn-secondary">
-              Read More Success Stories
+            <Link to="/contact" className="btn-secondary">
+              Start Your Success Story
             </Link>
           </div>
         </div>
@@ -696,24 +770,24 @@ const Index = () => {
       >
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-responsive-h2 font-bold mb-4">
-            Ready to Start Your English Journey?
+            Ready to Achieve Your International Dreams?
           </h2>
           <p className="text-responsive-lg mb-8 opacity-90">
-            Join thousands of successful students and book your free trial
-            lesson today.
+            Join thousands of successful students and start your journey to
+            global success today.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
               className="bg-white text-primary hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors"
             >
-              Book Free Trial
+              Enroll Now
             </Link>
             <Link
-              to="/courses"
+              to="/immigration-visa"
               className="border-2 border-white text-white hover:bg-white hover:text-primary px-8 py-4 rounded-lg font-semibold transition-colors"
             >
-              View All Courses
+              Immigration Support
             </Link>
           </div>
         </div>

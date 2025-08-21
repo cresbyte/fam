@@ -17,7 +17,7 @@ const fadeInUp = {
   visible: (i: number) => ({
     opacity: 1,
     y: 0,
-    transition: { delay: i * 0.15, duration: 0.6, ease: "easeOut" },
+    transition: { delay: i * 0.15, duration: 0.6, ease: "easeOut" as const },
   }),
 };
 
@@ -119,7 +119,7 @@ const About = () => {
             transition={{ delay: 0.2, duration: 0.7 }}
             className="text-responsive-h1 font-bold text-foreground mb-6"
           >
-            About <span className="gradient-text">Faminternational</span>
+            About <span className="gradient-text">Fam International</span>
           </motion.h1>
           <motion.p
             initial={{ y: 20, opacity: 0 }}
@@ -127,10 +127,11 @@ const About = () => {
             transition={{ delay: 0.4, duration: 0.7 }}
             className="text-responsive-lg text-muted-foreground leading-relaxed"
           >
-            Founded in 2018, Faminternational has helped over 24,000 students
-            achieve English fluency and advance their careers. We combine proven
+            Founded in 2018, Fam International has helped over 24,000 students
+            achieve their international dreams through expert IELTS training, English spoken courses, 
+            GRE preparation, and comprehensive immigration support. We combine proven
             teaching methods with modern technology to deliver personalized,
-            effective language learning experiences.
+            effective learning experiences.
           </motion.p>
         </div>
       </motion.section>

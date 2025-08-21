@@ -62,7 +62,7 @@ const Contact = () => {
     {
       icon: Mail,
       title: "Email Us",
-      details: "info@Faminternational.com",
+      details: "info@englishflow.com",
       description: "Get a response within 24 hours",
     },
     {
@@ -112,11 +112,11 @@ const Contact = () => {
             {/* Contact Form */}
             <div className="card-minimal">
               <h2 className="text-responsive-h2 font-bold text-foreground mb-6">
-                Get Your Free Assessment
+                Start Your International Journey
               </h2>
               <p className="text-responsive-base text-muted-foreground mb-8">
-                Tell us about your English learning goals and we'll create a
-                personalized plan just for you.
+                Tell us about your goals for IELTS, English spoken, GRE training, or immigration support, 
+                and we'll create a personalized plan just for you.
               </p>
 
               <form onSubmit={handleSubmit} className="space-y-6">
@@ -216,12 +216,12 @@ const Contact = () => {
                     className="w-full px-4 py-3 border border-input rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent bg-background text-foreground"
                   >
                     <option value="">Select your primary goal</option>
-                    <option value="business">Business English</option>
+                    <option value="ielts">IELTS Training</option>
+                    <option value="english-spoken">English Spoken</option>
+                    <option value="gre">GRE Training</option>
+                    <option value="immigration">Immigration & Visa Support</option>
+                    <option value="study-abroad">Study Abroad</option>
                     <option value="career">Career Advancement</option>
-                    <option value="conversation">Conversation Skills</option>
-                    <option value="academic">Academic English</option>
-                    <option value="interview">Job Interview Preparation</option>
-                    <option value="general">General Fluency</option>
                     <option value="other">Other</option>
                   </select>
                 </div>
@@ -309,24 +309,14 @@ const Contact = () => {
                   personalized learning plan and next steps.
                 </p>
               </div>
+
+           
             </div>
           </div>
         </div>
       </section>
 
-      {/* FAQ Section */}
-      <section className="section-spacing bg-secondary">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-responsive-h2 font-bold text-foreground mb-4">
-              Common Questions
-            </h2>
-            <p className="text-responsive-lg text-muted-foreground">
-              Quick answers to help you get started faster.
-            </p>
-          </div>
-        </div>
-      </section>
+
     </div>
   );
 };

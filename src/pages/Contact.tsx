@@ -38,14 +38,13 @@ const Contact = () => {
         submission_date: new Date().toLocaleString(),
       };
 
-      // Send email using EmailJS
-      const result = await emailjs.send(
-        "service_as7qtk4", // Replace with your EmailJS service ID
-        "template_iyr6ifs", // Replace with your EmailJS template ID
-        templateParams,
-        "2i1E8TaLjfFs7ncMP" // Replace with your EmailJS public key
-      );
-
+       const result = await emailjs.send(
+         "service_as7qtk4", // Replace with your EmailJS service ID
+         "template_iyr6ifs", // Replace with your EmailJS template ID
+         templateParams,
+         "2i1E8TaLjfFs7ncMP" // Replace with your EmailJS public key
+       );
+ 
       console.log("Email sent successfully:", result);
 
       setSubmitStatus("success");

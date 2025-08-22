@@ -140,7 +140,6 @@ const ImmigrationVisa = () => {
       ],
       duration: "3-5 weeks",
       target: "Listening & Speaking 120+",
-     
     },
     {
       icon: <FileText className="h-8 w-8" />,
@@ -382,7 +381,6 @@ const ImmigrationVisa = () => {
             Life Skills to help you achieve your immigration goals. Plus
             comprehensive visa and settlement support services.
           </motion.p>
-        
         </div>
       </motion.section>
 
@@ -396,8 +394,6 @@ const ImmigrationVisa = () => {
         className="section-spacing   border-border"
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-       
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pteServices.map((service, index) => (
               <motion.div
